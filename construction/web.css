@@ -1,0 +1,138 @@
+/* body {
+    background-image: url('./images/Building.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
+@media (max-width:600px){
+    body{
+        height: 100%;
+        overflow: auto;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    *{
+        width: 100%;
+    }
+
+}
+nav{
+    position: sticky;
+}
+#background{
+    background-image: url('./images/Building.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+@media (max-width:600px) {
+    #background{
+        background-image: url('./images/building-mobile.png');
+        background-size: cover;
+        height: 100vh;
+    }
+    .img1{
+        display: none;
+    }
+}
+h1{
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+    margin-top: 25px;
+}
+.card{
+    display: grid;
+    gap: 10;
+    padding: 10px;
+    margin: 10px;
+}
+@media (max-screen:700px) {
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+.btn{
+    align-items: center;
+    justify-content: center;
+}
+.clr{
+    background-color: gray;
+    background-size: contain;
+    width: 100%;
+}
+@media (max-width:700px) {
+    .clr{
+        width: 100%;
+        background-color: gray;
+        background-size: cover;
+    }
+}
+.img1{
+    background-image: url('./images/newcom.png');
+    height: 300px;
+    width: 100%;
+    background-position: 25%;
+}
+/* .navbar{
+    display: flex;
+    flex-direction: column;
+} */
+.register{
+    padding: 10px;
+    margin: 30px;
+    border: 2px solid black;
+    width: 300px;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    border-radius: 5px;
+}
+form{
+    margin: 10px;
+}
+label{
+    margin: 5px;
+}
+img{
+    width: 300px;
+    height: 150px;
+}
+.services{
+    text-align: center;
+}
+#icon{
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width:600px) {
+    #icon{
+        display: block;
+    }
+    
+}
+
+
+

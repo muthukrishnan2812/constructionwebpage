@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<link rel="icon" type="image/x-icon" href="./images/icon/icon2.png">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+         $(function(){
+            $('#web').load('web.html');
+        });
+        $(function(){
+            $('#footer').load('footer.html');
+        });
+
+        function myfunc(event){
+                event.preventDefault();
+    var Name = document.getElementById('fname').value;
+    console.log(Name);
+    var Phonenumber = document.getElementById('number').value;
+    var Email = document.getElementById('email').value;
+    var Location = document.getElementById('location').value;
+
+    localStorage.setItem('ls_Name', Name);
+    localStorage.setItem('ls_Phonenumber', Phonenumber);
+    localStorage.setItem('ls_Email', Email);
+    localStorage.setItem('ls_Location',Location);
+
+    document.getElementById('user_form').reset();
+    }
+    </script>
+<body style="background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);">
+    <div id="web"></div>
+    <div class="parent">
+    <div class="register">
+        <form action="" id="user_form">
+            <label for="name" >Name:
+            <input type="text" id="fname" required>
+            </label>
+            <label for="num">Phone Num:
+            <input type="tel" max="10" min="1" id="number" required>
+            </label>
+            <label for="mail">Email:
+            <input type="email" id="email" required>
+            </label>
+            <label for="loc">Location:
+            <select name="location" id="location" required>
+            <option value="">select place</option>
+            <option value="Tirunelveli">Tirunelveli</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Madurai">Madurai</option>
+            </select>
+            </label>
+        </form>
+        <button type="button" onclick="myfunc(event)" class="btn btn-danger" id="user_form">submit</button>
+
+    </div>
+    </div>
+    
+</body>
+<div id="footer"></div>
+
+</html>
